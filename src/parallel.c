@@ -137,7 +137,7 @@ void mpiBlastnExecute() {
 
 	sprintf(
 			cmd,
-			"./blastall -p blastp -query %s -db %s -out %s -outfmt 6 -num_descriptions 1 -num_alignments 1 -num_threads %d",
+			"./blastall -p blastp -i %s -d %s -o %s -m 8 -v 1 -a %d",
 			file_name, globals.base_name, out, globals.num_threads);
 
 	DEBUG_MSG("%s\n", cmd);
